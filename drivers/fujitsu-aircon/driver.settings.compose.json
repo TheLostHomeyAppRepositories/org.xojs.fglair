@@ -1,0 +1,30 @@
+[
+    {
+        "type": "group",
+        "label": {
+            "en": "FGLAir Credentials"
+        },
+        "children": [
+            {
+                "id": "username",
+                "type": "text",
+                "label": {
+                    "en": "Username"
+                },
+                "hint": {
+                    "en": "FGLAir username"
+                }
+            },
+            {
+                "id": "password",
+                "type": "password",
+                "label": {
+                    "en": "Password"
+                },
+                "hint": {
+                    "en": "FGLAir password"
+                }
+            }
+        ]
+    }
+]
