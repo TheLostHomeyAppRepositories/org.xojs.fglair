@@ -13,6 +13,7 @@
   "description": {
     "en": "Adds support for MyBrand devices."
   },
+  "brandColor": "#3BA7FE",
   "category": [
     "climate"
   ],
@@ -25,6 +26,11 @@
   "author": {
     "name": "Tim Wilkinson",
     "email": "tim.wilkinson@me.com"
+  },
+  "homeyCommunityTopicId": 0,
+  "source": "https://github.com/aanon4/org.xojs.fglair/",
+  "bugs": {
+    "url": "https://github.com/aanon4/org.xojs.fglair/issues"
   },
   "drivers": [
     {

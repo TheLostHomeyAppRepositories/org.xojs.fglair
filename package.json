@@ -7,6 +7,6 @@
     "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.10"
   },
   "dependencies": {
-    "fglair": "^1.0.0"
+    "fglair": "^1.0.1"
   }
 }
