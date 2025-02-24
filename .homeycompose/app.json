@@ -7,10 +7,10 @@
     "local"
   ],
   "name": {
-    "en": "FGLAir"
+    "en": "Fujiair"
   },
   "description": {
-    "en": "Adds support for FGLAir devices."
+    "en": "Fujitsu heap pump integration."
   },
   "brandColor": "#3BA7FE",
   "category": [
