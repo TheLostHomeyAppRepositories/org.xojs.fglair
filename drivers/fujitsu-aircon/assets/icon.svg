@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1013 1010" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g>
+        <path d="M862.2,887L150.1,887C135.8,887 124.1,875.3 124.1,861L124.1,149C124.1,134.7 135.7,123 150.1,123L862.2,123C876.5,123 888.2,134.6 888.2,149L888.2,861C888.1,875.4 876.5,887 862.2,887ZM150.1,129C139.1,129 130.1,138 130.1,149L130.1,861C130.1,872 139.1,881 150.1,881L862.2,881C873.2,881 882.2,872 882.2,861L882.2,149C882.2,138 873.2,129 862.2,129L150.1,129Z" style="fill-rule:nonzero;stroke:black;stroke-width:40px;"/>
+    </g>
+    <g>
+        <path d="M752.3,655.2L269.3,655.2C261.8,655.2 255.7,649.1 255.7,641.6L255.7,359C255.7,351.5 261.8,345.4 269.3,345.4L752.3,345.4C759.8,345.4 765.9,351.5 765.9,359L765.9,641.6C765.9,649.1 759.8,655.2 752.3,655.2ZM269.4,351.4C265.2,351.4 261.8,354.8 261.8,359L261.8,641.6C261.8,645.8 265.2,649.2 269.4,649.2L752.4,649.2C756.6,649.2 760,645.8 760,641.6L760,359C760,354.8 756.6,351.4 752.4,351.4L269.4,351.4Z" style="fill-rule:nonzero;stroke:black;stroke-width:20px;"/>
+    </g>
+    <g>
+        <g>
+            <path d="M342.2,780.8L332.6,780.8L364.6,755.1L395,780.4L353.1,780.8L359.8,774.4L378.4,774.4L364.6,762.9L342.2,780.8Z" style="fill-rule:nonzero;stroke:black;stroke-width:10px;"/>
+        </g>
+    </g>
+    <g>
+        <path d="M673.3,755.1L682.9,755.1L650.9,780.8L620.5,755.5L662.4,755.1L655.7,761.5L637.1,761.5L650.9,773L673.3,755.1Z" style="fill-rule:nonzero;stroke:black;stroke-width:10px;"/>
+    </g>
+    <g>
+        <path d="M504.3,782.8L490.7,769.2L508.1,751.8L525.5,769.2L511.8,782.8L511.8,791.3L534,769.2L508.1,743.3L482.2,769.2L504.3,791.3L504.3,782.8Z" style="fill-rule:nonzero;stroke:black;stroke-width:10px;"/>
+    </g>
+</svg>

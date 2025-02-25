@@ -132,9 +132,9 @@
               }
             },
             {
-              "id": "auto",
+              "id": "heat",
               "title": {
-                "en": "Auto"
+                "en": "Heat"
               }
             },
             {
@@ -144,21 +144,21 @@
               }
             },
             {
-              "id": "dry",
-              "title": {
-                "en": "Dry"
-              }
-            },
-            {
               "id": "fan",
               "title": {
                 "en": "Fan"
               }
             },
             {
-              "id": "heat",
+              "id": "dry",
               "title": {
-                "en": "Heat"
+                "en": "Dry"
+              }
+            },
+            {
+              "id": "auto",
+              "title": {
+                "en": "Auto"
               }
             }
           ]
