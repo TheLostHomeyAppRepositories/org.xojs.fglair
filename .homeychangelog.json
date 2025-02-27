@@ -4,5 +4,8 @@
   },
   "1.0.1": {
     "en": "Updated assets"
+  },
+  "1.0.2": {
+    "en": "Updated FGLAir library version."
   }
 }
