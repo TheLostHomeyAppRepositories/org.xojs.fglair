@@ -16,5 +16,8 @@
   },
   "1.0.5": {
     "en": "Remove measure_temperature until it can be updated reliably"
+  },
+  "1.0.6": {
+    "en": "Updated with athom homey-vectors"
   }
 }
