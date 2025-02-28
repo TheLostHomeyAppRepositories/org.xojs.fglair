@@ -15,6 +15,8 @@ module.exports = class AirConn extends Homey.Device {
         await this.getAPI();
         this.dsn = this.getData().dsn;
         this.interval = null;
+        // Remove the measure_temperature capability until the api can return it reliably
+        await this.removeCapability("measure_temperature");
         await this.controls();
         await this.update();
         this.setInterval(INTERVAL);
@@ -69,8 +71,8 @@ module.exports = class AirConn extends Homey.Device {
         if (!this.api) {
             const settings = this.getSettings();
             this.api = await FGL(settings.username, settings.password);
-            this.setAvailable().catch(this.error);
         }
+        this.setAvailable().catch(this.error);
         return this.api;
     }
 
@@ -84,7 +86,7 @@ module.exports = class AirConn extends Homey.Device {
             const status = await (await this.getAPI()).getDeviceState(this.dsn);
             this.setCapabilityValue("fan_mode", status.fanSpeed).catch(this.error);
             this.setCapabilityValue("target_temperature", status.targetTemperatureC).catch(this.error);
-            this.setCapabilityValue("measure_temperature", status.currentTemperatureC).catch(this.error);
+            //this.setCapabilityValue("measure_temperature", status.currentTemperatureC).catch(this.error);
             this.setCapabilityValue("thermostat_mode", status.mode).catch(this.error);
         }
         catch (e) {
