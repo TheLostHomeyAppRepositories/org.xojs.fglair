@@ -10,5 +10,8 @@
   },
   "1.0.3": {
     "en": "Improvements based on review feedback."
+  },
+  "1.0.4": {
+    "en": "Better handle fglair's unreliable api"
   }
 }
