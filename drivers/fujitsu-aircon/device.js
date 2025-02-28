@@ -12,10 +12,8 @@ module.exports = class AirConn extends Homey.Device {
      */
     async onInit() {
         this.log('AirConn has been initialized');
-        const settings = this.getSettings();
-        const data = this.getData();
-        this.api = await FGL(settings.username, settings.password);
-        this.dsn = data.dsn;
+        await this.getAPI();
+        this.dsn = this.getData().dsn;
         this.interval = null;
         await this.controls();
         await this.update();
@@ -67,30 +65,64 @@ module.exports = class AirConn extends Homey.Device {
         }
     }
 
+    async getAPI() {
+        if (!this.api) {
+            const settings = this.getSettings();
+            this.api = await FGL(settings.username, settings.password);
+            this.setAvailable().catch(this.error);
+        }
+        return this.api;
+    }
+
+    async resetAPI(msg) {
+        this.api = null;
+        this.setUnavailable(msg).catch(this.error);
+    }
+
     async update() {
-        const status = await this.api.getDeviceState(this.dsn);
-        this.setCapabilityValue("fan_mode", status.fanSpeed).catch(this.error);
-        this.setCapabilityValue("target_temperature", status.targetTemperatureC).catch(this.error);
-        this.setCapabilityValue("measure_temperature", status.currentTemperatureC).catch(this.error);
-        this.setCapabilityValue("thermostat_mode", status.mode).catch(this.error);
+        try {
+            const status = await (await this.getAPI()).getDeviceState(this.dsn);
+            this.setCapabilityValue("fan_mode", status.fanSpeed).catch(this.error);
+            this.setCapabilityValue("target_temperature", status.targetTemperatureC).catch(this.error);
+            this.setCapabilityValue("measure_temperature", status.currentTemperatureC).catch(this.error);
+            this.setCapabilityValue("thermostat_mode", status.mode).catch(this.error);
+        }
+        catch (e) {
+            this.resetAPI(e.message);
+        }
     }
 
     async controls() {
         this.log("AirConn controls");
         this.registerCapabilityListener("fan_mode", async (value) => {
-            await this.api.setDeviceState(this.dsn, {
-                fanSpeed: value
-            })
+            try {
+                await (await this.getAPI()).setDeviceState(this.dsn, {
+                    fanSpeed: value
+                });
+            }
+            catch (_) {
+                this.resetAPI();
+            }
         });
         this.registerCapabilityListener("target_temperature", async (value) => {
-            await this.api.setDeviceState(this.dsn, {
-                targetTemperatureC: value
-            })
+            try {
+                await (await this.getAPI()).setDeviceState(this.dsn, {
+                    targetTemperatureC: value
+                });
+            }
+            catch (_) {
+                this.resetAPI();;
+            }
         });
         this.registerCapabilityListener("thermostat_mode", async (value) => {
-            await this.api.setDeviceState(this.dsn, {
-                mode: value
-            })
+            try {
+                await (await this.getAPI()).setDeviceState(this.dsn, {
+                    mode: value
+                });
+            }
+            catch (_) {
+                this.resetAPI();;
+            }
         });
     }
 
