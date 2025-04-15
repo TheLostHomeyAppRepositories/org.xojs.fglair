@@ -28,5 +28,8 @@
   },
   "1.0.9": {
     "en": "Update library"
+  },
+  "1.0.10": {
+    "en": "Restore current temperature now we've worked out how to get it to update"
   }
 }
